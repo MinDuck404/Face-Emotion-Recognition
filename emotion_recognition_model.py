@@ -1,9 +1,7 @@
-# emotion_recognition_model.py
-
+import pickle
 from keras.models import Sequential
 from keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
-
 
 # Định nghĩa các đường dẫn đến các thư mục train và test
 train_dir = 'faces_data/train'  
@@ -30,7 +28,6 @@ test_generator = test_datagen.flow_from_directory(
     class_mode='categorical'
 )
 
-
 # Xây dựng mô hình CNN
 model = Sequential()
 
@@ -43,10 +40,11 @@ model.add(Dense(128, activation='relu'))
 model.add(Dropout(0.5))
 model.add(Dense(7, activation='softmax')) 
 
+# Biên dịch mô hình
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
-# Huấn luyện mô hình
-model.fit(
+# Huấn luyện mô hình và lưu lịch sử
+history = model.fit(
     train_generator,
     steps_per_epoch=train_generator.samples // train_generator.batch_size,
     epochs=25,
@@ -57,3 +55,8 @@ model.fit(
 # Lưu mô hình sau khi huấn luyện
 model.save('emotion_recognition_model.h5')
 print("Mô hình đã được lưu.")
+
+# Lưu lịch sử huấn luyện
+with open('training_history.pkl', 'wb') as f:
+    pickle.dump(history.history, f)
+print("Lịch sử huấn luyện đã được lưu.")
