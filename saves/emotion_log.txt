@@ -1,1 +1,6 @@
 2024-11-17 23:28:39 - Emotion: Sad - Confidence: 27.28%
+2024-11-18 10:36:58 - Emotion: Surprise - Confidence: 81.55%
+2024-11-18 10:36:59 - Emotion: Surprise - Confidence: 66.19%
+2024-11-18 10:37:03 - Emotion: Neutral - Confidence: 50.38%
+2024-11-18 10:37:52 - Emotion: Happy - Confidence: 38.79%
+2024-11-18 10:37:52 - Emotion: Angry - Confidence: 89.99%

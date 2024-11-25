@@ -14,7 +14,7 @@ model = load_model('emotion_recognition_model.h5')
 # Tải Haar Cascade để nhận diện gương mặt
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
-emotion_labels = ['Angry', 'Disgust', 'Fear', 'Happy', 'Sad', 'Neutral', 'Surprise']
+emotion_labels = ['Angry', 'Disgust', 'Fear', 'Happy', 'Neutral', 'Sad', 'Surprise']
 
 # Tạo thư mục "saves" nếu chưa tồn tại
 if not os.path.exists("saves"):
