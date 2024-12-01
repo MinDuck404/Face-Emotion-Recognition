@@ -53,16 +53,16 @@ fig, axs = plt.subplots(1, 3, figsize=(18, 6))
 
 # Biểu đồ Accuracy
 axs[0].plot(history['accuracy'], label='Training Accuracy')
-axs[0].plot(history['val_accuracy'], label='Validation Accuracy')
-axs[0].set_title('Training and Validation Accuracy')
+# axs[0].plot(history['val_accuracy'], label='Validation Accuracy')
+axs[0].set_title('Training Accuracy')
 axs[0].set_xlabel('Epochs')
 axs[0].set_ylabel('Accuracy')
 axs[0].legend()
 
 # Biểu đồ Loss
 axs[1].plot(history['loss'], label='Training Loss')
-axs[1].plot(history['val_loss'], label='Validation Loss')
-axs[1].set_title('Training and Validation Loss')
+# axs[1].plot(history['val_loss'], label='Validation Loss')
+axs[1].set_title('Training Loss')
 axs[1].set_xlabel('Epochs')
 axs[1].set_ylabel('Loss')
 axs[1].legend()
