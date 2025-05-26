@@ -9,6 +9,10 @@ Face Emotion Recognition là một ứng dụng nhận diện cảm xúc từ kh
 - **Hiển thị kết quả trên giao diện trực quan**.
 - **Ghi log cảm xúc vào file** để theo dõi lịch sử nhận diện.
 
+## 🎥 Demo
+Xem video demo để hiểu rõ hơn cách VN-SubMaker hoạt động:  
+[Video Demo VN-SubMaker](https://youtu.be/Tsa7WcBIg1E?si=LPreN4TgEYEIsc_h)
+
 ## 🖥️ Cài đặt
 ### 1️⃣ Yêu cầu hệ thống
 - Python 3.x
